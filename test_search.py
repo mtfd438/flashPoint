@@ -19,7 +19,7 @@ class Search(unittest.TestCase):
       self.assertGreater(results, 0)
 
 #verify a site search will return 0 results results if search querey is not found
-  def test_Search(self):
+  def test_Search_NotFound(self):
       searchpage = searchPage.SearchPage(self.driver)
       searchpage.search('123xxx456yyy')  
       results = searchpage.searchResults()
