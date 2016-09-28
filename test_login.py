@@ -4,12 +4,7 @@ import unittest
 import sys
 from pages import homePage
 from selenium import webdriver
-
  
-browser = sys.argv[1]
-
-print ("using browser " + browser)
-sys.exit
 
 class Login(unittest.TestCase):
   def setUp(self):
