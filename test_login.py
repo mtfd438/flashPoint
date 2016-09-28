@@ -2,7 +2,7 @@
 
 import unittest
 import sys
-from pages import homePage
+from pages import loginPage
 from selenium import webdriver
  
 
@@ -13,13 +13,13 @@ class Login(unittest.TestCase):
 
 #verify user can successfully login
   def test_Login_Passed(self):
-      loginpage = homePage.LoginPage(self.driver)
+      loginpage = loginPage.LoginPage(self.driver)
       loginpage.login('mmittiga17','Elsa4564')  
       assert loginpage.login_success_displayed()
 
 #verify user cannot login with bad credentials and login error alert is displayed 
   def test_Login_Failed(self):
-      loginpage = homePage.LoginPage(self.driver)
+      loginpage = loginPage.LoginPage(self.driver)
       loginpage.login('aldjfldj','aldjf')
       assert loginpage.login_error_displayed()
 
