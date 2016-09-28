@@ -15,9 +15,9 @@ Tests writen on mac
 - Testing script names test_login.py test_search.py test_singup.py
 
 ##TODOs
--Add test for a new user attempting to signing up with an exitisting ID
--Add robust error logging
--Add configuration file for URLs and crednetials 
+- Add test for a new user attempting to signing up with an exitisting ID
+- Add robust error logging
+- Add configuration file for URLs and crednetials 
 
 
 
