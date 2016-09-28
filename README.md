@@ -1,5 +1,6 @@
-# flashPoint assignment for Michael Mittiga
+# FlashPoint assignment for Michael Mittiga
 
 ## Details
-This was tests writen on mac
+Tests writen on mac
+
 
