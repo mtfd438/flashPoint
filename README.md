@@ -11,7 +11,7 @@ Tests writen on mac
 - Verify a new user can successfully signup for new Docker account
 
 ## How to run tests
-- From command line python <script.py>
+- From command line python script.py
 - Testing script names test_login.py test_search.py test_singup.py
 
 ##TODOs
