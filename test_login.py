@@ -4,7 +4,14 @@ import unittest
 import sys
 from pages import loginPage
 from selenium import webdriver
- 
+import ConfigParser
+import string
+
+config = ConfigParser.ConfigParser()
+config.read("conf.ini")
+id  = config.get("credentials","id") 
+pw  = config.get("credentials","pw") 
+
 
 class Login(unittest.TestCase):
   def setUp(self):
@@ -14,7 +21,7 @@ class Login(unittest.TestCase):
 #verify user can successfully login
   def test_Login_Passed(self):
       loginpage = loginPage.LoginPage(self.driver)
-      loginpage.login('mmittiga17','Elsa4564')  
+      loginpage.login(id,pw)  
       assert loginpage.login_success_displayed()
 
 #verify user cannot login with bad credentials and login error alert is displayed 
