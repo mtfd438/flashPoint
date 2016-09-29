@@ -11,12 +11,12 @@ config = ConfigParser.ConfigParser()
 config.read("conf.ini")
 id  = config.get("credentials","id") 
 pw  = config.get("credentials","pw") 
-
+url = config.get("url","url")
 
 class Login(unittest.TestCase):
   def setUp(self):
      self.driver = webdriver.Chrome() #chromedriver located in /usr/local/bin
-     self.driver.get("https://hub.docker.com/login/")
+     self.driver.get(url)
 
 #verify user can successfully login
   def test_Login_Passed(self):

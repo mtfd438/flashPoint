@@ -23,6 +23,10 @@ class LoginPage(BasePage):
         submitBttn.click()
         time.sleep(5) # delays for 3 seconds
     
+    def click_LoginButton(self):
+        loginBttn = self.driver.find_element_by_xpath('//a[text()="Log In"]')
+        loginBttn.click()
+    
     def login_error_displayed(self):
         notifcationElement = self.driver.find_element_by_xpath('//p[text()="Login Failed. The username or password may be incorrect."]')
         return notifcationElement.is_displayed()
@@ -32,6 +36,7 @@ class LoginPage(BasePage):
         return notifcationElement.is_displayed()
 
     def login(self, id, password):
+        self.click_LoginButton()
         self.set_password(password)
         self.set_userID(id) 
         self.click_submitButton()

@@ -4,12 +4,17 @@ import unittest
 import sys
 from pages import searchPage
 from selenium import webdriver
- 
+import ConfigParser
+import string
+
+config = ConfigParser.ConfigParser()
+config.read("conf.ini")
+url = config.get("url","url") 
 
 class Search(unittest.TestCase):
   def setUp(self):
      self.driver = webdriver.Chrome() #chromedriver located in /usr/local/bin
-     self.driver.get("https://hub.docker.com/")
+     self.driver.get(url)
 
 #verify a site search will return results
   def test_Search(self):
