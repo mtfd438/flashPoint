@@ -1,7 +1,5 @@
-# FlashPoint assignment for Michael Mittiga
+# Python Selenium Example
 
-## Details
-Tests writen on mac
 
 ## Tests included
 - Verify Docker site search will return 0 search results if search querey is not found
@@ -18,7 +16,6 @@ Tests writen on mac
 ##TODOs
 - Add test for a new user attempting to signing up with an exitisting ID
 - Add robust error logging
-- Add configuration file for URLs and crednetials 
 
 
 
