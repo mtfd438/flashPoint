@@ -1,4 +1,4 @@
-# Python Selenium Example
+# Python Selenium Examples
 
 
 ## Tests included
